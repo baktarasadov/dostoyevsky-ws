@@ -54,4 +54,6 @@ class Database {
   }
 }
 
-export default Database;
+const sequelize = Database.getInstance();
+
+export { Database, sequelize };
