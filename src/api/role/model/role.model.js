@@ -1,8 +1,6 @@
 import { DataTypes } from "sequelize";
 
-import Database from "../../../core/config/db.config";
-
-const sequelize = Database.getInstance();
+import { sequelize } from "../../../core/config/db.config";
 
 const Role = sequelize.define(
   "Role",

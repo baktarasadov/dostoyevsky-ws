@@ -21,7 +21,6 @@ const Contact = sequelize.define(
   {
     tableName: "contacts",
     timestamps: false,
-    id: false,
   },
 );
 

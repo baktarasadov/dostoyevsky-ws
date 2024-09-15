@@ -6,6 +6,7 @@ import { RoleSeeder } from "./role.seeder";
 export const roleDIKeys = {
   repository: "role-repository",
   seeder: "role-seeder",
+  service: "role-service",
 };
 
 container.register(roleDIKeys.repository, [], () => new RoleRepository());

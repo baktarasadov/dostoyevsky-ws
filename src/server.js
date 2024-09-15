@@ -3,7 +3,7 @@ import "express-async-errors";
 import { createServer } from "http";
 
 import app from "./app";
-import Database from "./core/config/db.config";
+import { Database } from "./core/config/db.config";
 import { seed } from "./core/db/seed";
 
 const server = createServer(app);
