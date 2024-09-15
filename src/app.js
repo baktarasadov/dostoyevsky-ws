@@ -1,4 +1,4 @@
-import cookieParser from "cookie-parser";
+import "@/core/di/di-globals";
 import cors from "cors";
 import express from "express";
 import { rateLimit } from "express-rate-limit";
@@ -18,7 +18,6 @@ app.use(
   }),
 );
 app.set("trust proxy", 1);
-app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
