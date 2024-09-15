@@ -1,4 +1,5 @@
 import { StatusCodes } from "http-status-codes";
+
 import { BaseResponse } from "../response/base-response";
 
 export default function baseResponseMiddleware(req, res, next) {
