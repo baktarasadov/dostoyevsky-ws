@@ -27,6 +27,8 @@ export class BaseRepository {
   }
 
   findAll() {
+    console.log("working FindAll");
+
     return this.model.findAll();
   }
 

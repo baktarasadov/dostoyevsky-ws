@@ -1,1 +1,1 @@
-//imports module
+import "@/api/role/role.di";

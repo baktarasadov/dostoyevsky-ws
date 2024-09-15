@@ -33,6 +33,7 @@ class Database {
     try {
       const sequelize = Database.getInstance();
       await sequelize.authenticate();
+      await sequelize.sync({ force: true });
       console.log("Successfully connected to the database.");
     } catch (error) {
       console.error("Error connecting to the database:", error);
@@ -53,4 +54,6 @@ class Database {
   }
 }
 
-export default Database;
+const sequelize = Database.getInstance();
+
+export { Database, sequelize };
