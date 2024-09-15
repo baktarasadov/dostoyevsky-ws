@@ -4,6 +4,7 @@ import { createServer } from "http";
 
 import app from "./app";
 import Database from "./core/config/db.config";
+import { seed } from "./core/db/seed";
 
 const server = createServer(app);
 const { PORT } = process.env;
@@ -11,6 +12,7 @@ const { PORT } = process.env;
 (async () => {
   try {
     await Database.connect(); // Connect to the database
+    await seed();
     console.log("Application started...");
     server.listen(PORT, () => {
       console.log(`Server is running on port ${PORT}`);
