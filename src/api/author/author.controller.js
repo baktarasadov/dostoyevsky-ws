@@ -42,7 +42,6 @@ export class AuthorController {
       request.params.authorId,
       request.body,
     );
-    console.log(author);
 
     response.success({
       message: "Author updated successfully",

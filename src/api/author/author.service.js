@@ -21,7 +21,7 @@ export class AuthorService {
     if (!author) {
       throw BaseResponse.error({
         status: StatusCodes.NOT_FOUND,
-        message: "User not found!",
+        message: "Author not found!",
       });
     }
 
