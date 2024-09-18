@@ -6,6 +6,7 @@ import { rateLimit } from "express-rate-limit";
 import authRouter from "./api/auth/auth.route";
 import authorRouter from "./api/author/author.route";
 import genreRouter from "./api/genre/genre.route";
+import publisherRouter from "./api/publisher/publisher.route";
 import { apiPrefix } from "./common/constant/api";
 import baseResponseMiddleware from "./core/middleware/base-response.middleware";
 import errorHandlerMiddleware from "./core/middleware/error-handler-middleware";
@@ -30,6 +31,7 @@ app.use(baseResponseMiddleware);
 app.use(apiPrefix, authRouter);
 app.use(apiPrefix, authorRouter);
 app.use(apiPrefix, genreRouter);
+app.use(apiPrefix, publisherRouter);
 
 app.use(errorHandlerMiddleware);
 
