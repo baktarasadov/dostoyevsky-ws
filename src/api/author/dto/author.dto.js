@@ -1,7 +1,7 @@
 export class AuthorDto {
-  constructor({ authorId, name, biography, dateOfBirth, nationality }) {
+  constructor({ id, name, biography, dateOfBirth, nationality }) {
     Object.assign(this, {
-      authorId,
+      id,
       name,
       biography,
       dateOfBirth,

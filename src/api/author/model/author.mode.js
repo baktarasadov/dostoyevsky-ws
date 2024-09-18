@@ -1,15 +1,10 @@
 import { DataTypes } from "sequelize";
+
 import { sequelize } from "../../../core/config/db.config";
 
 const Author = sequelize.define(
   "Author",
   {
-    authorId: {
-      type: DataTypes.UUID,
-      defaultValue: DataTypes.UUIDV4,
-      primaryKey: true,
-      allowNull: false,
-    },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
