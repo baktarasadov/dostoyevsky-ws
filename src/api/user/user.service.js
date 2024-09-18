@@ -11,12 +11,11 @@ export class UserService {
   }
 
   async create(userDto) {
-    let { password } = userDto;
+    const { password } = userDto;
 
     const { email, phoneNumber } = userDto.contact;
 
-    // eslint-disable-next-line no-unused-vars
-    password = await hashPassword(password);
+    const passwordHash = await hashPassword(password);
 
     const transaction = await sequelize.transaction();
 
@@ -33,6 +32,7 @@ export class UserService {
 
       return this.userRepository.create({
         ...userDto,
+        password: passwordHash,
         role: 1,
         contact: newContact.id,
       });
