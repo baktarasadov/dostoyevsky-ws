@@ -1,4 +1,4 @@
-import { container } from "@/core/di/di-container";
+import { container } from "@/core/di";
 
 import { GenreController } from "./genre.controller";
 import { GenreRepository } from "./genre.repository";

@@ -1,4 +1,4 @@
-import { container } from "@/core/di/di-container";
+import { container } from "@/core/di";
 import express from "express";
 
 import { genreDIKeys } from "./genre.di";

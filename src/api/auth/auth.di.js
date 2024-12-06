@@ -1,4 +1,4 @@
-import { container } from "@/core/di/di-container";
+import { container } from "@/core/di";
 
 import { userDIKeys } from "../user/user.di";
 import { AuthController } from "./auth.controller";

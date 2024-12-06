@@ -80,4 +80,10 @@ export class AuthService {
 
     return { accessToken };
   }
+
+  async createVerificationToken(payload) {
+    const { verificationExpiresIn, verificationSecret } = config.jwt;
+
+    return generateToken(payload, verificationSecret, verificationExpiresIn);
+  }
 }

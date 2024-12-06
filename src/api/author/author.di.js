@@ -1,4 +1,4 @@
-import { container } from "@/core/di/di-container";
+import { container } from "@/core/di";
 
 import { AuthorController } from "./author.controller";
 import { AuthorRepository } from "./author.repository";
