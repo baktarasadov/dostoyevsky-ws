@@ -1,0 +1,107 @@
+{
+    "root": true,
+    "parserOptions": {
+      "project": "jsconfig.json",
+      "ecmaVersion": 2020,
+      "sourceType": "module"
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:prettier/recommended",
+      "plugin:perfectionist/recommended-alphabetical",
+      "airbnb-base"
+    ],
+    "env": {
+      "node": true,
+      "commonjs": true,
+      "es2021": true
+    },
+    "ignorePatterns": [
+      ".eslintrc.js"
+    ],
+    "settings": {
+      "import/resolver": {
+        "webpack": {
+          "config": "webpack.config.js"
+        }
+      }
+    },
+    "rules": {
+      "no-multiple-empty-lines": [
+        "error",
+        {
+          "max": 1,
+          "maxEOF": 1,
+          "maxBOF": 0
+        }
+      ],
+      "padding-line-between-statements": [
+        "error",
+        {
+          "blankLine": "always",
+          "prev": [
+            "const",
+            "let",
+            "var"
+          ],
+          "next": [
+            "block",
+            "block-like",
+            "return"
+          ]
+        },
+        {
+          "blankLine": "always",
+          "prev": "*",
+          "next": [
+            "function",
+            "class",
+            "return"
+          ]
+        },
+        {
+          "blankLine": "always",
+          "prev": "import",
+          "next": [
+            "function",
+            "class",
+            "const",
+            "let",
+            "var",
+            "expression",
+            "block",
+            "block-like"
+          ]
+        }
+      ],
+      "perfectionist/sort-classes": "off",
+      "perfectionist/sort-objects": "off",
+      "prettier/prettier": [
+        "error",
+        {
+          "printWidth": 80
+        }
+      ],
+      "import/prefer-default-export": "off",
+      "class-methods-use-this": "off",
+      "implicit-arrow-linebreak": "off",
+      "new-cap": "off",
+      "no-underscore-dangle": "off",
+      "operator-linebreak": "off",
+      "object-curly-newline": "off",
+      "function-paren-newline": "off",
+      "no-duplicate-imports": "error",
+      "no-var": "error",
+      "quotes": [
+        "error",
+        "double"
+      ],
+      "newline-per-chained-call": "off",
+      "import/extensions": "off",
+      "consistent-return": "warn",
+      "no-extra-boolean-cast": "off",
+      "func-names": "off",
+      "no-console": "off",
+      "no-param-reassign": "off"
+    }
+  }
