@@ -1,4 +1,4 @@
-import { container } from "@/core/di/di-container";
+import { container } from "@/core/di";
 
 import { RoleRepository } from "./role.repository";
 import { RoleSeeder } from "./role.seeder";

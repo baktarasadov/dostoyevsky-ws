@@ -1,4 +1,4 @@
-import { container } from "@/core/di/di-container";
+import { container } from "@/core/di";
 
 import { UserRepository } from "./user.repository";
 import { UserSeeder } from "./user.seeder";

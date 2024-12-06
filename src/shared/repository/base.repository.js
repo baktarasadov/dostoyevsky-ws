@@ -8,10 +8,12 @@ export class BaseRepository {
   }
 
   async update(id, data) {
-    return this.model.update(data, {
+    const [, updatedAuthor] = await this.model.update(data, {
       where: { id },
       returning: true,
     });
+
+    return updatedAuthor[0];
   }
 
   delete(id) {
